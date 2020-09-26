@@ -9,14 +9,22 @@
 import Foundation
 import UIKit
 
+protocol ListRepositorieViewDelegate {
+    func reloadTableView()
+}
+
 class ListRepositorieView: UIView {
     
     //MARK: - Properties
+    var delegate: ListRepositorieViewDelegate?
+    
     let tableView: UITableView = {
         let tableView = UITableView(frame: .zero)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
+    
+    var refreshControl = UIRefreshControl()
     
     // MARK: - Inits
     init() {
@@ -35,14 +43,28 @@ extension ListRepositorieView: CodeView {
     // MARK: - Methods
      func setupComponents() {
          addSubview(tableView)
+         tableView.addSubview(refreshControl)
      }
      
      func setupConstraints() {
-         
+        //TableView
+        tableView.topAnchor.constraint(equalTo: topAnchor, constant: 0).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        tableView.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
+        tableView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        
+        refreshControl.attributedTitle = NSAttributedString(string: "")
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
      }
      
      func setupExtraConfigurations() {
         tableView.register(ListRepositorieTableViewCell.self, forCellReuseIdentifier: "ListRepositorieTableViewCell")
+     }
+    
+     @objc func refresh(_ sender: AnyObject) {
+        // Code to refresh table view
+        delegate?.reloadTableView()
+        
      }
     
 }

@@ -19,6 +19,9 @@
 		17B8FC9B251EEAFF00A78BC4 /* ListRepositorieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B8FC9A251EEAFF00A78BC4 /* ListRepositorieViewModel.swift */; };
 		17B8FC9F251EED1900A78BC4 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B8FC9E251EED1900A78BC4 /* Coordinator.swift */; };
 		17B8FCA1251EED5000A78BC4 /* ListRepositorieCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B8FCA0251EED5000A78BC4 /* ListRepositorieCoordinator.swift */; };
+		17B8FCA4251F853800A78BC4 /* RepositoryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B8FCA3251F853800A78BC4 /* RepositoryAPI.swift */; };
+		17B8FCA6251F862800A78BC4 /* ListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B8FCA5251F862800A78BC4 /* ListRepository.swift */; };
+		17B8FCA9251F977D00A78BC4 /* UIImage+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B8FCA8251F977D00A78BC4 /* UIImage+URL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		17B8FC9A251EEAFF00A78BC4 /* ListRepositorieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRepositorieViewModel.swift; sourceTree = "<group>"; };
 		17B8FC9E251EED1900A78BC4 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		17B8FCA0251EED5000A78BC4 /* ListRepositorieCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRepositorieCoordinator.swift; sourceTree = "<group>"; };
+		17B8FCA3251F853800A78BC4 /* RepositoryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryAPI.swift; sourceTree = "<group>"; };
+		17B8FCA5251F862800A78BC4 /* ListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRepository.swift; sourceTree = "<group>"; };
+		17B8FCA8251F977D00A78BC4 /* UIImage+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+URL.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,8 @@
 		17B8FC5E251EE3AD00A78BC4 /* SwiftRepositories */ = {
 			isa = PBXGroup;
 			children = (
+				17B8FCA7251F976900A78BC4 /* Extension */,
+				17B8FCA2251F852000A78BC4 /* Shared */,
 				17B8FC9D251EED0800A78BC4 /* Coordinator */,
 				17B8FC92251EE72600A78BC4 /* ListRepositories */,
 				17B8FC8F251EE6D400A78BC4 /* CodeView */,
@@ -183,6 +191,7 @@
 		17B8FC9C251EEB1400A78BC4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				17B8FCA5251F862800A78BC4 /* ListRepository.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,6 +203,22 @@
 				17B8FCA0251EED5000A78BC4 /* ListRepositorieCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		17B8FCA2251F852000A78BC4 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				17B8FCA3251F853800A78BC4 /* RepositoryAPI.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		17B8FCA7251F976900A78BC4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				17B8FCA8251F977D00A78BC4 /* UIImage+URL.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,7 +358,10 @@
 				17B8FC96251EE89800A78BC4 /* ListRepositorieView.swift in Sources */,
 				17B8FC91251EE6E900A78BC4 /* CodeView.swift in Sources */,
 				17B8FC98251EEA6F00A78BC4 /* ListRepositorieTableViewCell.swift in Sources */,
+				17B8FCA6251F862800A78BC4 /* ListRepository.swift in Sources */,
 				17B8FC9F251EED1900A78BC4 /* Coordinator.swift in Sources */,
+				17B8FCA9251F977D00A78BC4 /* UIImage+URL.swift in Sources */,
+				17B8FCA4251F853800A78BC4 /* RepositoryAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

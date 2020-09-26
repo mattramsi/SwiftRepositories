@@ -11,8 +11,9 @@ import UIKit
 class ListRepositorieViewController: UIViewController {
     
     // MARK: - Properties
-    lazy var viewModel = ListRepositorieViewModel()
+    var viewModel = ListRepositorieViewModel()
     var coordinator: ListRepositorieCoordinator?
+    let listRepositorieView = ListRepositorieView()
     
     let label: UILabel = {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 22))
@@ -24,11 +25,37 @@ class ListRepositorieViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let listRepositorieView = ListRepositorieView()
         view = listRepositorieView
+        listRepositorieView.delegate = self
         listRepositorieView.tableView.delegate = self
+        listRepositorieView.tableView.dataSource = self
         
+        loadRepositories()
 
+    
+    }
+    
+    private func loadRepositories() {
+        
+        viewModel.loadRepositories()  { (result) in
+            
+            switch result {
+                
+            case .success(let listRepository):
+                
+                self.viewModel = ListRepositorieViewModel(model: listRepository.items.map(RepositoryModel.init))
+                
+                DispatchQueue.main.async {
+                    self.listRepositorieView.tableView.reloadData()
+                    self.listRepositorieView.refreshControl.endRefreshing()
+                }
+                
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
     }
     
     deinit {
@@ -44,13 +71,17 @@ extension ListRepositorieViewController: UITableViewDelegate, UITableViewDataSou
         return viewModel.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ListRepositorieTableViewCell", for: indexPath) as? ListRepositorieTableViewCell else {
             return UITableViewCell()
         }
         
-//        cell.configure(with: )
+        cell.configure(with: viewModel.getRepositoryAt(at: indexPath.row))
         
         return cell
         
@@ -60,3 +91,15 @@ extension ListRepositorieViewController: UITableViewDelegate, UITableViewDataSou
     
 }
 
+
+extension ListRepositorieViewController: ListRepositorieViewDelegate {
+    
+    func reloadTableView() {
+        DispatchQueue.main.async {
+            self.loadRepositories()
+        }
+    }
+    
+    
+    
+}
