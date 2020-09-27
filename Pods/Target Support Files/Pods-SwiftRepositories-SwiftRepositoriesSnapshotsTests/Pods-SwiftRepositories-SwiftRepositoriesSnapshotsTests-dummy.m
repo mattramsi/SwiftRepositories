@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_SwiftRepositories_SwiftRepositoriesSnapshotsTests : NSObject
+@end
+@implementation PodsDummy_Pods_SwiftRepositories_SwiftRepositoriesSnapshotsTests
+@end
