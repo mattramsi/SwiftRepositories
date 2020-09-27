@@ -18,7 +18,7 @@ class RepositoryAPITest: XCTestCase {
         XCTAssertEqual(respositoryApi.basePath, "https://api.github.com/search/repositories?q=language:swift&sort=stars")
     }
     
-    func testGetRepositoriesSuccessReturnsMovies() {
+    func testGetSuccessReturnsRepositories() {
         
         let apiRespository = RepositoryAPI.shared
         let repositoriesExpectation = expectation(description: "repositories")
