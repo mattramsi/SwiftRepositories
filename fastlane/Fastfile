@@ -1,0 +1,35 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Description of what the lane does"
+  lane :tests do
+    scan(workspace: "SwiftRepositories.xcworkspace", device: "iPhone 8", scheme: "SwiftRepositories", code_coverage: true)
+
+  slather(
+      output_directory: "fastlane/html",
+      workspace: "SwiftRepositories.xcworkspace",
+      html: true,
+      scheme: "SwiftRepositories",
+      proj: "SwiftRepositories.xcodeproj",
+      ignore: [ "R.generated.swift", "Pods/*"],
+      verbose: true,
+      show: true
+  )
+
+  end
+end
