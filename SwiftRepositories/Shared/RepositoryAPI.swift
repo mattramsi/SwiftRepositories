@@ -28,7 +28,9 @@ enum APIError: Error {
 
 class RepositoryAPI {
     
-    private static let basePath = "https://api.github.com/search/repositories?q=language:swift&sort=stars"
+    static let shared = RepositoryAPI()
+    
+    let basePath = "https://api.github.com/search/repositories?q=language:swift&sort=stars"
     
     private static let configuration: URLSessionConfiguration = {
         let configuration = URLSessionConfiguration.default
@@ -39,9 +41,9 @@ class RepositoryAPI {
         return configuration
     }()
     
-    private static let session = URLSession(configuration: configuration)
+    var session = URLSession(configuration: configuration)
     
-    static func loadRepositories(onComplete: @escaping (Result<ListRepository, APIError>) -> Void) {
+    func loadRepositories(onComplete: @escaping (Result<ListRepository, APIError>) -> Void) {
 
         guard let url = URL(string: basePath) else {
             return onComplete(.failure(.badURL))
@@ -71,12 +73,10 @@ class RepositoryAPI {
                 return onComplete(.failure(.invalidJSON))
             }
         }
+        
         task.resume()
     }
     
-    private func treatError() {
-        
-    }
 }
 
 enum HTTPMethod: String {

@@ -25,7 +25,7 @@ class ListRepositorieViewModel {
     
     func loadRepositories(onComplete: @escaping (Result<ListRepository, APIError>) -> Void){
 
-        RepositoryAPI.loadRepositories(onComplete: onComplete)
+        RepositoryAPI.shared.loadRepositories(onComplete: onComplete)
     }
     
     func getRepositoryAt(at index: Int) -> RepositoryViewModel {

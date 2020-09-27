@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		17405E7C2520062D00AD1518 /* SwiftRepositoriesSnapshotsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17405E7B2520062D00AD1518 /* SwiftRepositoriesSnapshotsTests.swift */; };
+		17405E842520DDD700AD1518 /* RepositoryAPITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17405E832520DDD700AD1518 /* RepositoryAPITest.swift */; };
 		17B8FC60251EE3AD00A78BC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B8FC5F251EE3AD00A78BC4 /* AppDelegate.swift */; };
 		17B8FC64251EE3AD00A78BC4 /* ListRepositorieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B8FC63251EE3AD00A78BC4 /* ListRepositorieViewController.swift */; };
 		17B8FC69251EE3B000A78BC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17B8FC68251EE3B000A78BC4 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		17405E792520062D00AD1518 /* SwiftRepositoriesSnapshotsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftRepositoriesSnapshotsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17405E7B2520062D00AD1518 /* SwiftRepositoriesSnapshotsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRepositoriesSnapshotsTests.swift; sourceTree = "<group>"; };
 		17405E7D2520062D00AD1518 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17405E832520DDD700AD1518 /* RepositoryAPITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryAPITest.swift; sourceTree = "<group>"; };
 		17B8FC5C251EE3AD00A78BC4 /* SwiftRepositories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftRepositories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17B8FC5F251EE3AD00A78BC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17B8FC63251EE3AD00A78BC4 /* ListRepositorieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRepositorieViewController.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 			children = (
 				17B8FCDA251FC55500A78BC4 /* RepositoriesTest.swift */,
 				17B8FCDC251FC55500A78BC4 /* Info.plist */,
+				17405E832520DDD700AD1518 /* RepositoryAPITest.swift */,
 			);
 			path = RepositoriesTest;
 			sourceTree = "<group>";
@@ -525,6 +528,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17405E842520DDD700AD1518 /* RepositoryAPITest.swift in Sources */,
 				17B8FCDB251FC55500A78BC4 /* RepositoriesTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

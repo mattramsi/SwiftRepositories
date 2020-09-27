@@ -7,9 +7,9 @@
 <body>
 <header><div class="row"><a href="index.html"><img src="logo.jpg" alt="Slather logo"></a></div></header><div class="row"><div id="reports">
 <h2 class="cov_title">
-<span>Coverage for "RepositoryAPI.swift" : </span><span class="cov_low">31.37%</span>
+<span>Coverage for "RepositoryAPI.swift" : </span><span class="cov_low">63.46%</span>
 </h2>
-<h4 class="cov_subtitle">(16 of 51 relevant lines covered)</h4>
+<h4 class="cov_subtitle">(33 of 52 relevant lines covered)</h4>
 <h4 class="cov_filepath">SwiftRepositories/Shared/RepositoryAPI.swift</h4>
 <table class="source_code">
 <tr class="never">
@@ -164,7 +164,7 @@
 </tr>
 <tr class="never">
 <td class="num">31</td>
-<td class="src"><pre><code class="objc">    private static let basePath = "https://api.github.com/search/repositories?q=language:swift&amp;sort=stars"</code></pre></td>
+<td class="src"><pre><code class="objc">    static let shared = RepositoryAPI()</code></pre></td>
 <td class="coverage"></td>
 </tr>
 <tr class="never">
@@ -172,55 +172,55 @@
 <td class="src"><pre><code class="objc">    </code></pre></td>
 <td class="coverage"></td>
 </tr>
-<tr class="covered">
+<tr class="never">
 <td class="num">33</td>
+<td class="src"><pre><code class="objc">    let basePath = "https://api.github.com/search/repositories?q=language:swift&amp;sort=stars"</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">34</td>
+<td class="src"><pre><code class="objc">    </code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="covered">
+<td class="num">35</td>
 <td class="src"><pre><code class="objc">    private static let configuration: URLSessionConfiguration = {</code></pre></td>
 <td class="coverage">2x</td>
 </tr>
 <tr class="covered">
-<td class="num">34</td>
+<td class="num">36</td>
 <td class="src"><pre><code class="objc">        let configuration = URLSessionConfiguration.default</code></pre></td>
 <td class="coverage">2x</td>
 </tr>
 <tr class="covered">
-<td class="num">35</td>
+<td class="num">37</td>
 <td class="src"><pre><code class="objc">        configuration.httpAdditionalHeaders = ["Content-Type": "application/json"]</code></pre></td>
 <td class="coverage">2x</td>
 </tr>
 <tr class="covered">
-<td class="num">36</td>
+<td class="num">38</td>
 <td class="src"><pre><code class="objc">        configuration.allowsCellularAccess = true</code></pre></td>
 <td class="coverage">2x</td>
 </tr>
 <tr class="covered">
-<td class="num">37</td>
+<td class="num">39</td>
 <td class="src"><pre><code class="objc">        configuration.timeoutIntervalForRequest = 30</code></pre></td>
 <td class="coverage">2x</td>
 </tr>
 <tr class="covered">
-<td class="num">38</td>
+<td class="num">40</td>
 <td class="src"><pre><code class="objc">        configuration.httpMaximumConnectionsPerHost = 5</code></pre></td>
 <td class="coverage">2x</td>
 </tr>
 <tr class="covered">
-<td class="num">39</td>
+<td class="num">41</td>
 <td class="src"><pre><code class="objc">        return configuration</code></pre></td>
 <td class="coverage">2x</td>
 </tr>
 <tr class="covered">
-<td class="num">40</td>
+<td class="num">42</td>
 <td class="src"><pre><code class="objc">    }()</code></pre></td>
 <td class="coverage">2x</td>
-</tr>
-<tr class="never">
-<td class="num">41</td>
-<td class="src"><pre><code class="objc">    </code></pre></td>
-<td class="coverage"></td>
-</tr>
-<tr class="never">
-<td class="num">42</td>
-<td class="src"><pre><code class="objc">    private static let session = URLSession(configuration: configuration)</code></pre></td>
-<td class="coverage"></td>
 </tr>
 <tr class="never">
 <td class="num">43</td>
@@ -229,216 +229,226 @@
 </tr>
 <tr class="covered">
 <td class="num">44</td>
-<td class="src"><pre><code class="objc">    static func loadRepositories(onComplete: @escaping (Result&lt;ListRepository, APIError&gt;) -&gt; Void) {</code></pre></td>
-<td class="coverage">3x</td>
+<td class="src"><pre><code class="objc">    var session = URLSession(configuration: configuration)</code></pre></td>
+<td class="coverage">2x</td>
 </tr>
-<tr class="covered">
+<tr class="never">
 <td class="num">45</td>
-<td class="src"><pre><code class="objc"></code></pre></td>
-<td class="coverage">3x</td>
+<td class="src"><pre><code class="objc">    </code></pre></td>
+<td class="coverage"></td>
 </tr>
 <tr class="covered">
 <td class="num">46</td>
+<td class="src"><pre><code class="objc">    func loadRepositories(onComplete: @escaping (Result&lt;ListRepository, APIError&gt;) -&gt; Void) {</code></pre></td>
+<td class="coverage">4x</td>
+</tr>
+<tr class="covered">
+<td class="num">47</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">4x</td>
+</tr>
+<tr class="covered">
+<td class="num">48</td>
 <td class="src"><pre><code class="objc">        guard let url = URL(string: basePath) else {</code></pre></td>
-<td class="coverage">3x</td>
+<td class="coverage">4x</td>
 </tr>
 <tr class="missed">
-<td class="num">47</td>
+<td class="num">49</td>
 <td class="src"><pre><code class="objc">            return onComplete(.failure(.badURL))</code></pre></td>
 <td class="coverage">!</td>
 </tr>
 <tr class="covered">
-<td class="num">48</td>
-<td class="src"><pre><code class="objc">        }</code></pre></td>
-<td class="coverage">3x</td>
-</tr>
-<tr class="covered">
-<td class="num">49</td>
-<td class="src"><pre><code class="objc">        </code></pre></td>
-<td class="coverage">3x</td>
-</tr>
-<tr class="covered">
 <td class="num">50</td>
-<td class="src"><pre><code class="objc">        let task = session.dataTask(with: url) { (data, response, error) in</code></pre></td>
-<td class="coverage">3x</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">4x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">51</td>
-<td class="src"><pre><code class="objc">            if let _ = error {</code></pre></td>
-<td class="coverage">!</td>
+<td class="src"><pre><code class="objc">        </code></pre></td>
+<td class="coverage">4x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">52</td>
-<td class="src"><pre><code class="objc">                return onComplete(.failure(.taskError))</code></pre></td>
-<td class="coverage">!</td>
+<td class="src"><pre><code class="objc">        let task = session.dataTask(with: url) { (data, response, error) in</code></pre></td>
+<td class="coverage">4x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">53</td>
-<td class="src"><pre><code class="objc">            }</code></pre></td>
-<td class="coverage">!</td>
+<td class="src"><pre><code class="objc">            if let _ = error {</code></pre></td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="missed">
 <td class="num">54</td>
-<td class="src"><pre><code class="objc">            guard let response = response as? HTTPURLResponse else {</code></pre></td>
+<td class="src"><pre><code class="objc">                return onComplete(.failure(.taskError))</code></pre></td>
 <td class="coverage">!</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">55</td>
-<td class="src"><pre><code class="objc">                return onComplete(.failure(.noResponse))</code></pre></td>
-<td class="coverage">!</td>
-</tr>
-<tr class="missed">
-<td class="num">56</td>
 <td class="src"><pre><code class="objc">            }</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">2x</td>
+</tr>
+<tr class="covered">
+<td class="num">56</td>
+<td class="src"><pre><code class="objc">            guard let response = response as? HTTPURLResponse else {</code></pre></td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="missed">
 <td class="num">57</td>
-<td class="src"><pre><code class="objc">            if !(200...299 ~= response.statusCode) {</code></pre></td>
+<td class="src"><pre><code class="objc">                return onComplete(.failure(.noResponse))</code></pre></td>
 <td class="coverage">!</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">58</td>
-<td class="src"><pre><code class="objc">                return onComplete(.failure(.invalidStatusCode(response.statusCode)))</code></pre></td>
-<td class="coverage">!</td>
-</tr>
-<tr class="missed">
-<td class="num">59</td>
 <td class="src"><pre><code class="objc">            }</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">2x</td>
+</tr>
+<tr class="covered">
+<td class="num">59</td>
+<td class="src"><pre><code class="objc">            if !(200...299 ~= response.statusCode) {</code></pre></td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="missed">
 <td class="num">60</td>
-<td class="src"><pre><code class="objc">            </code></pre></td>
+<td class="src"><pre><code class="objc">                return onComplete(.failure(.invalidStatusCode(response.statusCode)))</code></pre></td>
 <td class="coverage">!</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">61</td>
-<td class="src"><pre><code class="objc">            guard let data = data else {</code></pre></td>
-<td class="coverage">!</td>
-</tr>
-<tr class="missed">
-<td class="num">62</td>
-<td class="src"><pre><code class="objc">                return onComplete(.failure(.noData))</code></pre></td>
-<td class="coverage">!</td>
-</tr>
-<tr class="missed">
-<td class="num">63</td>
 <td class="src"><pre><code class="objc">            }</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">2x</td>
+</tr>
+<tr class="covered">
+<td class="num">62</td>
+<td class="src"><pre><code class="objc">            </code></pre></td>
+<td class="coverage">2x</td>
+</tr>
+<tr class="covered">
+<td class="num">63</td>
+<td class="src"><pre><code class="objc">            guard let data = data else {</code></pre></td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="missed">
 <td class="num">64</td>
-<td class="src"><pre><code class="objc">            </code></pre></td>
+<td class="src"><pre><code class="objc">                return onComplete(.failure(.noData))</code></pre></td>
 <td class="coverage">!</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">65</td>
-<td class="src"><pre><code class="objc">            do {</code></pre></td>
-<td class="coverage">!</td>
+<td class="src"><pre><code class="objc">            }</code></pre></td>
+<td class="coverage">2x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">66</td>
-<td class="src"><pre><code class="objc">                </code></pre></td>
-<td class="coverage">!</td>
+<td class="src"><pre><code class="objc">            </code></pre></td>
+<td class="coverage">2x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">67</td>
-<td class="src"><pre><code class="objc">                let listRepository = try JSONDecoder().decode(ListRepository.self, from: data)</code></pre></td>
-<td class="coverage">!</td>
+<td class="src"><pre><code class="objc">            do {</code></pre></td>
+<td class="coverage">2x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">68</td>
-<td class="src"><pre><code class="objc">                return onComplete(.success(listRepository))</code></pre></td>
-<td class="coverage">!</td>
-</tr>
-<tr class="missed">
-<td class="num">69</td>
 <td class="src"><pre><code class="objc">                </code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">2x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
+<td class="num">69</td>
+<td class="src"><pre><code class="objc">                let listRepository = try JSONDecoder().decode(ListRepository.self, from: data)</code></pre></td>
+<td class="coverage">2x</td>
+</tr>
+<tr class="covered">
 <td class="num">70</td>
+<td class="src"><pre><code class="objc">                return onComplete(.success(listRepository))</code></pre></td>
+<td class="coverage">2x</td>
+</tr>
+<tr class="covered">
+<td class="num">71</td>
+<td class="src"><pre><code class="objc">                </code></pre></td>
+<td class="coverage">2x</td>
+</tr>
+<tr class="covered">
+<td class="num">72</td>
 <td class="src"><pre><code class="objc">            } catch {</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="missed">
-<td class="num">71</td>
+<td class="num">73</td>
 <td class="src"><pre><code class="objc">                return onComplete(.failure(.invalidJSON))</code></pre></td>
 <td class="coverage">!</td>
 </tr>
 <tr class="missed">
-<td class="num">72</td>
+<td class="num">74</td>
 <td class="src"><pre><code class="objc">            }</code></pre></td>
 <td class="coverage">!</td>
 </tr>
 <tr class="missed">
-<td class="num">73</td>
+<td class="num">75</td>
 <td class="src"><pre><code class="objc">        }</code></pre></td>
 <td class="coverage">!</td>
 </tr>
 <tr class="covered">
-<td class="num">74</td>
+<td class="num">76</td>
 <td class="src"><pre><code class="objc">        task.resume()</code></pre></td>
-<td class="coverage">3x</td>
+<td class="coverage">4x</td>
 </tr>
 <tr class="covered">
-<td class="num">75</td>
+<td class="num">77</td>
 <td class="src"><pre><code class="objc">    }</code></pre></td>
-<td class="coverage">3x</td>
+<td class="coverage">4x</td>
 </tr>
 <tr class="never">
-<td class="num">76</td>
+<td class="num">78</td>
 <td class="src"><pre><code class="objc">    </code></pre></td>
 <td class="coverage"></td>
 </tr>
 <tr class="missed">
-<td class="num">77</td>
+<td class="num">79</td>
 <td class="src"><pre><code class="objc">    private func treatError() {</code></pre></td>
 <td class="coverage">!</td>
 </tr>
 <tr class="missed">
-<td class="num">78</td>
+<td class="num">80</td>
 <td class="src"><pre><code class="objc">        </code></pre></td>
 <td class="coverage">!</td>
 </tr>
 <tr class="missed">
-<td class="num">79</td>
+<td class="num">81</td>
 <td class="src"><pre><code class="objc">    }</code></pre></td>
 <td class="coverage">!</td>
 </tr>
 <tr class="never">
-<td class="num">80</td>
+<td class="num">82</td>
 <td class="src"><pre><code class="objc">}</code></pre></td>
 <td class="coverage"></td>
 </tr>
 <tr class="never">
-<td class="num">81</td>
+<td class="num">83</td>
 <td class="src"><pre><code class="objc"></code></pre></td>
 <td class="coverage"></td>
 </tr>
 <tr class="never">
-<td class="num">82</td>
+<td class="num">84</td>
 <td class="src"><pre><code class="objc">enum HTTPMethod: String {</code></pre></td>
 <td class="coverage"></td>
 </tr>
 <tr class="never">
-<td class="num">83</td>
+<td class="num">85</td>
 <td class="src"><pre><code class="objc">    case put = "PUT"</code></pre></td>
 <td class="coverage"></td>
 </tr>
 <tr class="never">
-<td class="num">84</td>
+<td class="num">86</td>
 <td class="src"><pre><code class="objc">    case post = "POST"</code></pre></td>
 <td class="coverage"></td>
 </tr>
 <tr class="never">
-<td class="num">85</td>
+<td class="num">87</td>
 <td class="src"><pre><code class="objc">    case delete = "DELETE"</code></pre></td>
 <td class="coverage"></td>
 </tr>
 <tr class="never">
-<td class="num">86</td>
+<td class="num">88</td>
 <td class="src"><pre><code class="objc">}</code></pre></td>
 <td class="coverage"></td>
 </tr>

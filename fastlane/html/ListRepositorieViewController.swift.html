@@ -7,9 +7,9 @@
 <body>
 <header><div class="row"><a href="index.html"><img src="logo.jpg" alt="Slather logo"></a></div></header><div class="row"><div id="reports">
 <h2 class="cov_title">
-<span>Coverage for "ListRepositorieViewController.swift" : </span><span class="cov_low">67.61%</span>
+<span>Coverage for "ListRepositorieViewController.swift" : </span><span class="cov_high">90.14%</span>
 </h2>
-<h4 class="cov_subtitle">(48 of 71 relevant lines covered)</h4>
+<h4 class="cov_subtitle">(64 of 71 relevant lines covered)</h4>
 <h4 class="cov_filepath">SwiftRepositories/ListRepositories/Controllers/ListRepositorieViewController.swift</h4>
 <table class="source_code">
 <tr class="never">
@@ -217,90 +217,90 @@
 <td class="src"><pre><code class="objc">        viewModel.loadRepositories()  { (result) in</code></pre></td>
 <td class="coverage">3x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">42</td>
 <td class="src"><pre><code class="objc">            </code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">43</td>
 <td class="src"><pre><code class="objc">            switch result {</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">44</td>
 <td class="src"><pre><code class="objc">                </code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">45</td>
 <td class="src"><pre><code class="objc">            case .success(let listRepository):</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">46</td>
 <td class="src"><pre><code class="objc">                </code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">47</td>
 <td class="src"><pre><code class="objc">                self.viewModel = ListRepositorieViewModel(model: listRepository.items.map(RepositoryViewModel.init))</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">48</td>
 <td class="src"><pre><code class="objc">                </code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">49</td>
 <td class="src"><pre><code class="objc">                DispatchQueue.main.async {</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">50</td>
 <td class="src"><pre><code class="objc">                    self.listRepositorieView.tableView.reloadData()</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">51</td>
 <td class="src"><pre><code class="objc">                    self.listRepositorieView.refreshControl.endRefreshing()</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">52</td>
 <td class="src"><pre><code class="objc">                }</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">53</td>
 <td class="src"><pre><code class="objc">                </code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">54</td>
 <td class="src"><pre><code class="objc">                </code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">55</td>
 <td class="src"><pre><code class="objc">            case .failure(let error):</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
 <tr class="missed">
 <td class="num">56</td>
 <td class="src"><pre><code class="objc">                print(error)</code></pre></td>
 <td class="coverage">!</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">57</td>
 <td class="src"><pre><code class="objc">            }</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">58</td>
 <td class="src"><pre><code class="objc">        }</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
 <tr class="covered">
 <td class="num">59</td>
@@ -360,22 +360,22 @@
 <tr class="covered">
 <td class="num">70</td>
 <td class="src"><pre><code class="objc">    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int {</code></pre></td>
-<td class="coverage">8x</td>
+<td class="coverage">9x</td>
 </tr>
 <tr class="covered">
 <td class="num">71</td>
 <td class="src"><pre><code class="objc">        tableView.backgroundView = viewModel.count == 0 ? label : nil</code></pre></td>
-<td class="coverage">8x</td>
+<td class="coverage">9x</td>
 </tr>
 <tr class="covered">
 <td class="num">72</td>
 <td class="src"><pre><code class="objc">        return viewModel.count</code></pre></td>
-<td class="coverage">8x</td>
+<td class="coverage">9x</td>
 </tr>
 <tr class="covered">
 <td class="num">73</td>
 <td class="src"><pre><code class="objc">    }</code></pre></td>
-<td class="coverage">8x</td>
+<td class="coverage">9x</td>
 </tr>
 <tr class="never">
 <td class="num">74</td>
@@ -385,17 +385,17 @@
 <tr class="covered">
 <td class="num">75</td>
 <td class="src"><pre><code class="objc">    func numberOfSections(in tableView: UITableView) -&gt; Int {</code></pre></td>
-<td class="coverage">8x</td>
+<td class="coverage">9x</td>
 </tr>
 <tr class="covered">
 <td class="num">76</td>
 <td class="src"><pre><code class="objc">        return 1</code></pre></td>
-<td class="coverage">8x</td>
+<td class="coverage">9x</td>
 </tr>
 <tr class="covered">
 <td class="num">77</td>
 <td class="src"><pre><code class="objc">    }</code></pre></td>
-<td class="coverage">8x</td>
+<td class="coverage">9x</td>
 </tr>
 <tr class="never">
 <td class="num">78</td>
@@ -405,17 +405,17 @@
 <tr class="covered">
 <td class="num">79</td>
 <td class="src"><pre><code class="objc">    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -&gt; CGFloat {</code></pre></td>
-<td class="coverage">3x</td>
+<td class="coverage">42x</td>
 </tr>
 <tr class="covered">
 <td class="num">80</td>
 <td class="src"><pre><code class="objc">        return 100</code></pre></td>
-<td class="coverage">3x</td>
+<td class="coverage">42x</td>
 </tr>
 <tr class="covered">
 <td class="num">81</td>
 <td class="src"><pre><code class="objc">    }</code></pre></td>
-<td class="coverage">3x</td>
+<td class="coverage">42x</td>
 </tr>
 <tr class="never">
 <td class="num">82</td>
@@ -425,17 +425,17 @@
 <tr class="covered">
 <td class="num">83</td>
 <td class="src"><pre><code class="objc">    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -&gt; UITableViewCell {</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">14x</td>
 </tr>
 <tr class="covered">
 <td class="num">84</td>
 <td class="src"><pre><code class="objc">        </code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">14x</td>
 </tr>
 <tr class="covered">
 <td class="num">85</td>
 <td class="src"><pre><code class="objc">        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ListRepositorieTableViewCell", for: indexPath) as? ListRepositorieTableViewCell else {</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">14x</td>
 </tr>
 <tr class="missed">
 <td class="num">86</td>
@@ -445,37 +445,37 @@
 <tr class="covered">
 <td class="num">87</td>
 <td class="src"><pre><code class="objc">        }</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">14x</td>
 </tr>
 <tr class="covered">
 <td class="num">88</td>
 <td class="src"><pre><code class="objc">        </code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">14x</td>
 </tr>
 <tr class="covered">
 <td class="num">89</td>
 <td class="src"><pre><code class="objc">        cell.configure(with: viewModel.getRepositoryAt(at: indexPath.row))</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">14x</td>
 </tr>
 <tr class="covered">
 <td class="num">90</td>
 <td class="src"><pre><code class="objc">        </code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">14x</td>
 </tr>
 <tr class="covered">
 <td class="num">91</td>
 <td class="src"><pre><code class="objc">        return cell</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">14x</td>
 </tr>
 <tr class="covered">
 <td class="num">92</td>
 <td class="src"><pre><code class="objc">        </code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">14x</td>
 </tr>
 <tr class="covered">
 <td class="num">93</td>
 <td class="src"><pre><code class="objc">    }</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">14x</td>
 </tr>
 <tr class="never">
 <td class="num">94</td>
