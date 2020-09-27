@@ -19,10 +19,11 @@ class ListRepositorieCoordinator: Coordinator {
     
     init() {
         navigationController = UINavigationController()
-        navigationController.navigationBar.prefersLargeTitles = false
+        navigationController.navigationBar.prefersLargeTitles = true
         navigationController.navigationBar.tintColor = .white
-        navigationController.navigationBar.isTranslucent = false
-        navigationController.isNavigationBarHidden = true
+//        navigationController.navigationBar.isTranslucent = false
+        navigationController.isNavigationBarHidden = false
+        navigationController.navigationBar.backgroundColor = .white
     }
     
     func start() {

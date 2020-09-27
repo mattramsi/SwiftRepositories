@@ -13,7 +13,7 @@ class ListRepositorieViewController: UIViewController {
     // MARK: - Properties
     var viewModel = ListRepositorieViewModel()
     var coordinator: ListRepositorieCoordinator?
-    let listRepositorieView = ListRepositorieView()
+    var listRepositorieView: ListRepositorieView!
     
     let label: UILabel = {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 22))
@@ -25,14 +25,15 @@ class ListRepositorieViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Repositories Swift"
+        
+        listRepositorieView = ListRepositorieView(frame: view.frame)
         view = listRepositorieView
         listRepositorieView.delegate = self
         listRepositorieView.tableView.delegate = self
         listRepositorieView.tableView.dataSource = self
         
         loadRepositories()
-
-    
     }
     
     private func loadRepositories() {
@@ -43,7 +44,7 @@ class ListRepositorieViewController: UIViewController {
                 
             case .success(let listRepository):
                 
-                self.viewModel = ListRepositorieViewModel(model: listRepository.items.map(RepositoryModel.init))
+                self.viewModel = ListRepositorieViewModel(model: listRepository.items.map(RepositoryViewModel.init))
                 
                 DispatchQueue.main.async {
                     self.listRepositorieView.tableView.reloadData()
@@ -69,6 +70,10 @@ extension ListRepositorieViewController: UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         tableView.backgroundView = viewModel.count == 0 ? label : nil
         return viewModel.count
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

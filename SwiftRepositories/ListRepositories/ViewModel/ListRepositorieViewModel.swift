@@ -11,9 +11,9 @@ import Foundation
 
 class ListRepositorieViewModel {
     
-    var repositories = [RepositoryModel]()
+    var repositories = [RepositoryViewModel]()
     
-    init(model: [RepositoryModel]? = nil) {
+    init(model: [RepositoryViewModel]? = nil) {
         if let inputModel = model {
            repositories = inputModel
         }
@@ -28,13 +28,13 @@ class ListRepositorieViewModel {
         RepositoryAPI.loadRepositories(onComplete: onComplete)
     }
     
-    func getRepositoryAt(at index: Int) -> RepositoryModel {
+    func getRepositoryAt(at index: Int) -> RepositoryViewModel {
         return repositories[index]
     }
     
 }
 
-class RepositoryModel {
+class RepositoryViewModel {
     
     var repository: Repository
     

@@ -46,15 +46,16 @@ class ListRepositorieTableViewCell: UITableViewCell {
     }()
     
     //MARK: - Methods
-    func configure(with viewModel: RepositoryModel) {
+    func configure(with viewModel: RepositoryViewModel) {
         setup()
-        nameRepositoryLabel.text = viewModel.name
-        nameAuthorLabel.text = viewModel.author
-        starsLabel.text = viewModel.stars
+        nameRepositoryLabel.text = "Repository name: \(viewModel.name)"
+        nameAuthorLabel.text = "Author: \(viewModel.author)"
+        starsLabel.text = "Stars: \(viewModel.stars)"
         UIImage.loadFrom(url: URL(string: viewModel.imageUrl)!) { [weak self] image in
             self?.avatarImageView.image = image
         }
     }
+    
 }
 
 extension ListRepositorieTableViewCell: CodeView {
@@ -68,19 +69,21 @@ extension ListRepositorieTableViewCell: CodeView {
     
     func setupConstraints() {
         
-        nameRepositoryLabel.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        nameRepositoryLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
-        
-        nameAuthorLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10).isActive = true
-        nameAuthorLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
-        
-        starsLabel.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        starsLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
-        
-        avatarImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10).isActive = true
-        avatarImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
         avatarImageView.widthAnchor.constraint(equalToConstant: 50).isActive = true
         avatarImageView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        avatarImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        avatarImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
+        
+        nameRepositoryLabel.topAnchor.constraint(equalTo: topAnchor, constant: 20).isActive = true
+        nameRepositoryLabel.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: 10).isActive = true
+        nameRepositoryLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
+        
+        nameAuthorLabel.topAnchor.constraint(equalTo: nameRepositoryLabel.bottomAnchor, constant: 20).isActive = true
+        nameAuthorLabel.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: 10).isActive = true
+
+        starsLabel.topAnchor.constraint(equalTo: nameRepositoryLabel.bottomAnchor, constant: 20).isActive = true
+        starsLabel.leadingAnchor.constraint(equalTo: nameAuthorLabel.trailingAnchor, constant: 10).isActive = true
+
     }
     
     func setupExtraConfigurations() {
