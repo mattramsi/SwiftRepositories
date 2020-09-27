@@ -14,6 +14,7 @@ class ListRepositorieTableViewCell: UITableViewCell {
     //MARK - Properties
     let nameRepositoryLabel: UILabel = {
         let label = UILabel(frame: .zero)
+        label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .darkGray
         label.font = .systemFont(ofSize: 16)
