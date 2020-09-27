@@ -7,9 +7,9 @@
 <body>
 <header><div class="row"><a href="index.html"><img src="logo.jpg" alt="Slather logo"></a></div></header><div class="row"><div id="reports">
 <h2 class="cov_title">
-<span>Coverage for "ListRepositorieViewModel.swift" : </span><span class="cov_medium">70.97%</span>
+<span>Coverage for "ListRepositorieViewModel.swift" : </span><span class="cov_high">100.00%</span>
 </h2>
-<h4 class="cov_subtitle">(22 of 31 relevant lines covered)</h4>
+<h4 class="cov_subtitle">(31 of 31 relevant lines covered)</h4>
 <h4 class="cov_filepath">SwiftRepositories/ListRepositories/ViewModel/ListRepositorieViewModel.swift</h4>
 <table class="source_code">
 <tr class="never">
@@ -80,7 +80,7 @@
 <tr class="covered">
 <td class="num">14</td>
 <td class="src"><pre><code class="objc">    var repositories = [RepositoryViewModel]()</code></pre></td>
-<td class="coverage">7x</td>
+<td class="coverage">10x</td>
 </tr>
 <tr class="never">
 <td class="num">15</td>
@@ -90,27 +90,27 @@
 <tr class="covered">
 <td class="num">16</td>
 <td class="src"><pre><code class="objc">    init(model: [RepositoryViewModel]? = nil) {</code></pre></td>
-<td class="coverage">7x</td>
+<td class="coverage">10x</td>
 </tr>
 <tr class="covered">
 <td class="num">17</td>
 <td class="src"><pre><code class="objc">        if let inputModel = model {</code></pre></td>
-<td class="coverage">7x</td>
+<td class="coverage">10x</td>
 </tr>
 <tr class="covered">
 <td class="num">18</td>
 <td class="src"><pre><code class="objc">           repositories = inputModel</code></pre></td>
-<td class="coverage">3x</td>
+<td class="coverage">4x</td>
 </tr>
 <tr class="covered">
 <td class="num">19</td>
 <td class="src"><pre><code class="objc">        }</code></pre></td>
-<td class="coverage">7x</td>
+<td class="coverage">10x</td>
 </tr>
 <tr class="covered">
 <td class="num">20</td>
 <td class="src"><pre><code class="objc">    }</code></pre></td>
-<td class="coverage">7x</td>
+<td class="coverage">10x</td>
 </tr>
 <tr class="never">
 <td class="num">21</td>
@@ -120,17 +120,17 @@
 <tr class="covered">
 <td class="num">22</td>
 <td class="src"><pre><code class="objc">    var count: Int {</code></pre></td>
-<td class="coverage">8x</td>
+<td class="coverage">16x</td>
 </tr>
 <tr class="covered">
 <td class="num">23</td>
 <td class="src"><pre><code class="objc">        return repositories.count</code></pre></td>
-<td class="coverage">8x</td>
+<td class="coverage">16x</td>
 </tr>
 <tr class="covered">
 <td class="num">24</td>
 <td class="src"><pre><code class="objc">    }</code></pre></td>
-<td class="coverage">8x</td>
+<td class="coverage">16x</td>
 </tr>
 <tr class="never">
 <td class="num">25</td>
@@ -140,22 +140,22 @@
 <tr class="covered">
 <td class="num">26</td>
 <td class="src"><pre><code class="objc">    func loadRepositories(onComplete: @escaping (Result&lt;ListRepository, APIError&gt;) -&gt; Void){</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">3x</td>
 </tr>
 <tr class="covered">
 <td class="num">27</td>
 <td class="src"><pre><code class="objc"></code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">3x</td>
 </tr>
 <tr class="covered">
 <td class="num">28</td>
 <td class="src"><pre><code class="objc">        RepositoryAPI.loadRepositories(onComplete: onComplete)</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">3x</td>
 </tr>
 <tr class="covered">
 <td class="num">29</td>
 <td class="src"><pre><code class="objc">    }</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">3x</td>
 </tr>
 <tr class="never">
 <td class="num">30</td>
@@ -165,17 +165,17 @@
 <tr class="covered">
 <td class="num">31</td>
 <td class="src"><pre><code class="objc">    func getRepositoryAt(at index: Int) -&gt; RepositoryViewModel {</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="covered">
 <td class="num">32</td>
 <td class="src"><pre><code class="objc">        return repositories[index]</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="covered">
 <td class="num">33</td>
 <td class="src"><pre><code class="objc">    }</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="never">
 <td class="num">34</td>
@@ -215,17 +215,17 @@
 <tr class="covered">
 <td class="num">41</td>
 <td class="src"><pre><code class="objc">    init(repository: Repository) {</code></pre></td>
-<td class="coverage">3x</td>
+<td class="coverage">4x</td>
 </tr>
 <tr class="covered">
 <td class="num">42</td>
 <td class="src"><pre><code class="objc">        self.repository = repository</code></pre></td>
-<td class="coverage">3x</td>
+<td class="coverage">4x</td>
 </tr>
 <tr class="covered">
 <td class="num">43</td>
 <td class="src"><pre><code class="objc">    }</code></pre></td>
-<td class="coverage">3x</td>
+<td class="coverage">4x</td>
 </tr>
 <tr class="never">
 <td class="num">44</td>
@@ -235,77 +235,77 @@
 <tr class="covered">
 <td class="num">45</td>
 <td class="src"><pre><code class="objc">    var name: String {</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="covered">
 <td class="num">46</td>
 <td class="src"><pre><code class="objc">        return repository.name</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="covered">
 <td class="num">47</td>
 <td class="src"><pre><code class="objc">    }</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="never">
 <td class="num">48</td>
 <td class="src"><pre><code class="objc">    </code></pre></td>
 <td class="coverage"></td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">49</td>
 <td class="src"><pre><code class="objc">    var author: String {</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">50</td>
 <td class="src"><pre><code class="objc">        return repository.owner.author</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">51</td>
 <td class="src"><pre><code class="objc">    }</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
 <tr class="never">
 <td class="num">52</td>
 <td class="src"><pre><code class="objc">    </code></pre></td>
 <td class="coverage"></td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">53</td>
 <td class="src"><pre><code class="objc">    var stars: String {</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">54</td>
 <td class="src"><pre><code class="objc">        return "\(repository.stars)"</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">55</td>
 <td class="src"><pre><code class="objc">    }</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
 <tr class="never">
 <td class="num">56</td>
 <td class="src"><pre><code class="objc">    </code></pre></td>
 <td class="coverage"></td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">57</td>
 <td class="src"><pre><code class="objc">    var imageUrl: String {</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">58</td>
 <td class="src"><pre><code class="objc">        return repository.owner.avatarImage</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">59</td>
 <td class="src"><pre><code class="objc">    }</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
 <tr class="never">
 <td class="num">60</td>

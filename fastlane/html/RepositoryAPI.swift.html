@@ -175,42 +175,42 @@
 <tr class="covered">
 <td class="num">33</td>
 <td class="src"><pre><code class="objc">    private static let configuration: URLSessionConfiguration = {</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="covered">
 <td class="num">34</td>
 <td class="src"><pre><code class="objc">        let configuration = URLSessionConfiguration.default</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="covered">
 <td class="num">35</td>
 <td class="src"><pre><code class="objc">        configuration.httpAdditionalHeaders = ["Content-Type": "application/json"]</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="covered">
 <td class="num">36</td>
 <td class="src"><pre><code class="objc">        configuration.allowsCellularAccess = true</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="covered">
 <td class="num">37</td>
 <td class="src"><pre><code class="objc">        configuration.timeoutIntervalForRequest = 30</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="covered">
 <td class="num">38</td>
 <td class="src"><pre><code class="objc">        configuration.httpMaximumConnectionsPerHost = 5</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="covered">
 <td class="num">39</td>
 <td class="src"><pre><code class="objc">        return configuration</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="covered">
 <td class="num">40</td>
 <td class="src"><pre><code class="objc">    }()</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="never">
 <td class="num">41</td>
@@ -230,17 +230,17 @@
 <tr class="covered">
 <td class="num">44</td>
 <td class="src"><pre><code class="objc">    static func loadRepositories(onComplete: @escaping (Result&lt;ListRepository, APIError&gt;) -&gt; Void) {</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">3x</td>
 </tr>
 <tr class="covered">
 <td class="num">45</td>
 <td class="src"><pre><code class="objc"></code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">3x</td>
 </tr>
 <tr class="covered">
 <td class="num">46</td>
 <td class="src"><pre><code class="objc">        guard let url = URL(string: basePath) else {</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">3x</td>
 </tr>
 <tr class="missed">
 <td class="num">47</td>
@@ -250,17 +250,17 @@
 <tr class="covered">
 <td class="num">48</td>
 <td class="src"><pre><code class="objc">        }</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">3x</td>
 </tr>
 <tr class="covered">
 <td class="num">49</td>
 <td class="src"><pre><code class="objc">        </code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">3x</td>
 </tr>
 <tr class="covered">
 <td class="num">50</td>
 <td class="src"><pre><code class="objc">        let task = session.dataTask(with: url) { (data, response, error) in</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">3x</td>
 </tr>
 <tr class="missed">
 <td class="num">51</td>
@@ -380,12 +380,12 @@
 <tr class="covered">
 <td class="num">74</td>
 <td class="src"><pre><code class="objc">        task.resume()</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">3x</td>
 </tr>
 <tr class="covered">
 <td class="num">75</td>
 <td class="src"><pre><code class="objc">    }</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">3x</td>
 </tr>
 <tr class="never">
 <td class="num">76</td>
