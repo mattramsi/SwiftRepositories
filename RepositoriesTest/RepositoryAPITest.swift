@@ -36,7 +36,7 @@ class RepositoryAPITest: XCTestCase {
             repositoriesExpectation.fulfill()
         }
         
-        waitForExpectations(timeout: 2) { (error) in
+        waitForExpectations(timeout: 4) { (error) in
             XCTAssertNotNil(repositoriesResponse)
         }
         

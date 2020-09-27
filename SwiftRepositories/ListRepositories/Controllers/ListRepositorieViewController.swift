@@ -19,6 +19,7 @@ class ListRepositorieViewController: UIViewController {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 22))
         label.text = "Não existe repositórios de Swift"
         label.textAlignment = .center
+        label.isHidden = true
         return label
     }()
 
@@ -56,7 +57,6 @@ class ListRepositorieViewController: UIViewController {
                 print(error)
             }
         }
-        
     }
     
     deinit {

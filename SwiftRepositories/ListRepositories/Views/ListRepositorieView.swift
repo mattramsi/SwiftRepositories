@@ -27,11 +27,6 @@ class ListRepositorieView: UIView {
     var refreshControl = UIRefreshControl()
     
     // MARK: - Inits
-//    init() {
-//        super.init(frame: frame)
-//        setup()
-//    }
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
