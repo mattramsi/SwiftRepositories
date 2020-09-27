@@ -65,7 +65,7 @@ playground.xcworkspace
 # Carthage/Checkouts
 
 Carthage/Build/
-!Pods/Nimble/Carthage/
+!Users/vagrant/git/Pods/Nimble/Carthage/
 
 # Accio dependency management
 Dependencies/
