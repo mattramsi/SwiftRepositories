@@ -32,6 +32,7 @@ class RepositoryAPI {
     
     let basePath = "https://api.github.com/search/repositories?q=language:swift&sort=stars"
     
+    
     private static let configuration: URLSessionConfiguration = {
         let configuration = URLSessionConfiguration.default
         configuration.httpAdditionalHeaders = ["Content-Type": "application/json"]
@@ -73,7 +74,7 @@ class RepositoryAPI {
                 return onComplete(.failure(.invalidJSON))
             }
         }
-        
+            
         task.resume()
     }
     

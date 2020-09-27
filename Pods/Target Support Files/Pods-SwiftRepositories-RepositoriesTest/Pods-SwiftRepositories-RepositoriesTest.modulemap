@@ -1,4 +1,4 @@
-module Pods_SwiftRepositories_RepositoriesTest {
+framework module Pods_SwiftRepositories_RepositoriesTest {
   umbrella header "Pods-SwiftRepositories-RepositoriesTest-umbrella.h"
 
   export *

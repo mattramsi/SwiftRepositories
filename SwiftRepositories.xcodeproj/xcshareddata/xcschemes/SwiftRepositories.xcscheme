@@ -29,7 +29,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C82891EAB7293DBEE916B21F57E8474D"
-               BuildableName = "libQuick.a"
+               BuildableName = "Quick.framework"
                BlueprintName = "Quick"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6F13695E06195A78EA8A95F8C7ED0D2F"
-               BuildableName = "libNimble.a"
+               BuildableName = "Nimble.framework"
                BlueprintName = "Nimble"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
             </BuildableReference>
