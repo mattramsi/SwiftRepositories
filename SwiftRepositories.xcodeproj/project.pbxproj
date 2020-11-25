@@ -24,7 +24,7 @@
 		17B8FCA6251F862800A78BC4 /* ListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B8FCA5251F862800A78BC4 /* ListRepository.swift */; };
 		17B8FCA9251F977D00A78BC4 /* UIImage+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B8FCA8251F977D00A78BC4 /* UIImage+URL.swift */; };
 		17B8FCDB251FC55500A78BC4 /* RepositoriesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B8FCDA251FC55500A78BC4 /* RepositoriesTest.swift */; };
-		83A69E2B444F8BF8D5A992D1 /* Pods_SwiftRepositories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2305D63C39FEBC0273E1987A /* Pods_SwiftRepositories.framework */; };
+		83A69E2B444F8BF8D5A992D1 /* Pods_SwiftRepositories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2305D63C39FEBC0273E1987A /* Pods_SwiftRepositories.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		892A67ACA8DA08A644447A26 /* Pods_SwiftRepositories_SwiftRepositoriesSnapshotsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14030C20602BD92F10E9DD8B /* Pods_SwiftRepositories_SwiftRepositoriesSnapshotsTests.framework */; };
 /* End PBXBuildFile section */
 

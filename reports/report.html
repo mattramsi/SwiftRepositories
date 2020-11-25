@@ -110,9 +110,7 @@
       </section>
       <section class="right">
         <section id="counters">
-          <h2 id="test-count"><span class="number">8</span> tests</h2>
-          
-            <h2 id="fail-count"><span class="number">2</span> failures</h2>
+          <h2 id="test-count"><span class="number">7</span> tests</h2>
           
         </section>
         <section id="segment-bar">
@@ -134,7 +132,7 @@
               <tr class="test passing "  onclick="toggleDetails('ListRepositoryViewSpec__should_return_the_right_number_of_rows');">
                 <td>
                   
-                    <h3 class="time">0.015s</h3>
+                    <h3 class="time">0.010s</h3>
                   
                 </td>
                 <td><h3 class="title">ListRepositoryViewSpec__should_return_the_right_number_of_rows</h3></td>
@@ -156,7 +154,7 @@
               <tr class="test passing "  onclick="toggleDetails('ListRepositoryViewSpec__should_return_MatheusRep_if_user_select_first_Cell');">
                 <td>
                   
-                    <h3 class="time">0.005s</h3>
+                    <h3 class="time">0.004s</h3>
                   
                 </td>
                 <td><h3 class="title">ListRepositoryViewSpec__should_return_MatheusRep_if_user_select_first_Cell</h3></td>
@@ -168,7 +166,7 @@
         </section>
       
         
-        <section class="test-suite failing" id="RepositoriesTest.RepositoryAPITest">
+        <section class="test-suite passing" id="RepositoriesTest.RepositoryAPITest">
           <section class="heading" onclick="toggleTests(this);">
             <h3 class="title">RepositoriesTest.RepositoryAPITest</h3>
           </section>
@@ -190,7 +188,7 @@
               <tr class="test passing odd"  onclick="toggleDetails('testGetSuccessReturnsRepositories');">
                 <td>
                   
-                    <h3 class="time">1.430s</h3>
+                    <h3 class="time">1.124s</h3>
                   
                 </td>
                 <td><h3 class="title">testGetSuccessReturnsRepositories</h3></td>
@@ -198,36 +196,10 @@
               
             
               
-              <tr class="test failing "  onclick="toggleDetails('testParsingFailure');">
+              <tr class="test passing "  onclick="toggleDetails('testSuccessfulResponse');">
                 <td>
                   
-                </td>
-                <td><h3 class="title">testParsingFailure</h3></td>
-              </tr>
-              
-                <tr class="details failing testParsingFailure">
-                  <td></td>
-                  <td>
-                    
-                      <section class="test-detail reason">failed - Incorrect error received.</section>
-                    
-                    
-                      <section class="test-detail snippet">          <span class="k">guard</span> <span class="k">let</span> <span class="nv">error</span> <span class="o">=</span> <span class="n">error</span> <span class="k">as?</span> <span class="kt">APIResponseError</span> <span class="k">else</span> <span class="p">{</span>
-            <span class="kt">XCTFail</span><span class="p">(</span><span class="s">"Incorrect error received."</span><span class="p">)</span>
-            <span class="n">exp</span><span class="o">.</span><span class="nf">fulfill</span><span class="p">()</span>
-</section>
-                      <section class="test-detail">/Users/matheusramos/Documents/Projects/SwiftRepositories/RepositoriesTest/RepositoryAPITest.swift:126</section>
-                    
-                    
-                  </td>
-                </tr>
-              
-            
-              
-              <tr class="test passing odd"  onclick="toggleDetails('testSuccessfulResponse');">
-                <td>
-                  
-                    <h3 class="time">0.009s</h3>
+                    <h3 class="time">0.011s</h3>
                   
                 </td>
                 <td><h3 class="title">testSuccessfulResponse</h3></td>
@@ -239,7 +211,7 @@
         </section>
       
         
-        <section class="test-suite failing" id="SwiftRepositoriesSnapshotsTests.SwiftRepositoriesSnapshotsTests">
+        <section class="test-suite passing" id="SwiftRepositoriesSnapshotsTests.SwiftRepositoriesSnapshotsTests">
           <section class="heading" onclick="toggleTests(this);">
             <h3 class="title">SwiftRepositoriesSnapshotsTests.SwiftRepositoriesSnapshotsTests</h3>
           </section>
@@ -247,29 +219,14 @@
             <table>
             
               
-              <tr class="test failing "  onclick="toggleDetails('testView');">
+              <tr class="test passing "  onclick="toggleDetails('testView');">
                 <td>
+                  
+                    <h3 class="time">0.126s</h3>
                   
                 </td>
                 <td><h3 class="title">testView</h3></td>
               </tr>
-              
-                <tr class="details failing testView">
-                  <td></td>
-                  <td>
-                    
-                      <section class="test-detail reason">failed - Snapshot comparison failed: Optional(Error Domain=FBSnapshotTestControllerErrorDomain Code=1 "Unable to load reference image." UserInfo={NSLocalizedFailureReason=Reference image not found. You need to run the test in record mode, NSLocalizedDescription=Unable to load reference image., FBReferenceImageFilePathKey=/Users/matheusramos/Documents/Projects/SwiftRepositories/SwiftRepositoriesSnapshotsTests/ReferenceImages_64/SwiftRepositoriesSnapshotsTests.SwiftRepositoriesSnapshotsTests/testView_iPhone_14_2_375x667.png})</section>
-                    
-                    
-                      <section class="test-detail snippet">        <span class="c1">//Then</span>
-        <span class="kt">FBSnapshotVerifyView</span><span class="p">(</span><span class="n">sut</span><span class="o">.</span><span class="n">view</span><span class="p">)</span>
-    <span class="p">}</span>
-</section>
-                      <section class="test-detail">/Users/matheusramos/Documents/Projects/SwiftRepositories/SwiftRepositoriesSnapshotsTests/SwiftRepositoriesSnapshotsTests.swift:43</section>
-                    
-                    
-                  </td>
-                </tr>
               
             
             </table>

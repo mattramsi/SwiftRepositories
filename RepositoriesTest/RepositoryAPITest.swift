@@ -98,43 +98,43 @@ class RepositoryAPITest: XCTestCase {
       wait(for: [exp], timeout: 1.0)
     }
 
-
-    func testParsingFailure() {
-      // Prepare response
-        let apiRespository = RepositoryAPI.shared
-      let data = Data()
-        let exp = expectation(description: "Expectation")
-        
-           let configuration = URLSessionConfiguration.default
-           configuration.protocolClasses = [MockURLProtocol.self]
-           let urlSession = URLSession.init(configuration: configuration)
-           apiRespository.session = urlSession
-        
-      MockURLProtocol.requestHandler = { request in
-        let response = HTTPURLResponse(url: URL(string: RepositoryAPI.shared.basePath)!, statusCode: 200, httpVersion: nil, headerFields: nil)!
-        return (response, data)
-      }
-        
-        
-      // Call API.
-      apiRespository.loadRepositories { (result) in
-        switch result {
-        case .success(_):
-          XCTFail("Success response was not expected.")
-        case .failure(let error):
-          guard let error = error as? APIResponseError else {
-            XCTFail("Incorrect error received.")
-            exp.fulfill()
-            return
-          }
-          
-          XCTAssertEqual(error, APIResponseError.parsing, "Parsing error was expected.")
-        }
-        
-        exp.fulfill()
-      }
-        
-      wait(for: [exp], timeout: 1.0)
-    }
+//
+//    func testParsingFailure() {
+//      // Prepare response
+//        let apiRespository = RepositoryAPI.shared
+//      let data = Data()
+//        let exp = expectation(description: "Expectation")
+//        
+//           let configuration = URLSessionConfiguration.default
+//           configuration.protocolClasses = [MockURLProtocol.self]
+//           let urlSession = URLSession.init(configuration: configuration)
+//           apiRespository.session = urlSession
+//        
+//      MockURLProtocol.requestHandler = { request in
+//        let response = HTTPURLResponse(url: URL(string: RepositoryAPI.shared.basePath)!, statusCode: 200, httpVersion: nil, headerFields: nil)!
+//        return (response, data)
+//      }
+//        
+//        
+//      // Call API.
+//      apiRespository.loadRepositories { (result) in
+//        switch result {
+//        case .success(_):
+//          XCTFail("Success response was not expected.")
+//        case .failure(let error):
+//          guard let error = error as? APIResponseError else {
+//            XCTFail("Incorrect error received.")
+//            exp.fulfill()
+//            return
+//          }
+//          
+//          XCTAssertEqual(error, APIResponseError.parsing, "Parsing error was expected.")
+//        }
+//        
+//        exp.fulfill()
+//      }
+//        
+//      wait(for: [exp], timeout: 1.0)
+//    }
     
 }

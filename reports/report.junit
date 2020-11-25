@@ -1,21 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testsuites name='SwiftRepositoriesSnapshotsTests.xctest' tests='8' failures='2'>
+<testsuites name='SwiftRepositoriesSnapshotsTests.xctest' tests='7' failures='0'>
   <testsuite name='RepositoriesTest.RepositoriesTest' tests='3' failures='0'>
-    <testcase classname='RepositoriesTest.RepositoriesTest' name='ListRepositoryViewSpec__should_return_the_right_number_of_rows' time='0.015'/>
+    <testcase classname='RepositoriesTest.RepositoriesTest' name='ListRepositoryViewSpec__should_return_the_right_number_of_rows' time='0.010'/>
     <testcase classname='RepositoriesTest.RepositoriesTest' name='ListRepositoryViewSpec__should_return_the_right_number_of_sections' time='0.004'/>
-    <testcase classname='RepositoriesTest.RepositoriesTest' name='ListRepositoryViewSpec__should_return_MatheusRep_if_user_select_first_Cell' time='0.005'/>
+    <testcase classname='RepositoriesTest.RepositoriesTest' name='ListRepositoryViewSpec__should_return_MatheusRep_if_user_select_first_Cell' time='0.004'/>
   </testsuite>
-  <testsuite name='RepositoriesTest.RepositoryAPITest' tests='4' failures='1'>
+  <testsuite name='RepositoriesTest.RepositoryAPITest' tests='3' failures='0'>
     <testcase classname='RepositoriesTest.RepositoryAPITest' name='testGetRepositoriesWithExpectedURL' time='0.001'/>
-    <testcase classname='RepositoriesTest.RepositoryAPITest' name='testGetSuccessReturnsRepositories' time='1.430'/>
-    <testcase classname='RepositoriesTest.RepositoryAPITest' name='testParsingFailure'>
-      <failure message='failed - Incorrect error received.'>RepositoriesTest/RepositoryAPITest.swift:126</failure>
-    </testcase>
-    <testcase classname='RepositoriesTest.RepositoryAPITest' name='testSuccessfulResponse' time='0.009'/>
+    <testcase classname='RepositoriesTest.RepositoryAPITest' name='testGetSuccessReturnsRepositories' time='1.124'/>
+    <testcase classname='RepositoriesTest.RepositoryAPITest' name='testSuccessfulResponse' time='0.011'/>
   </testsuite>
-  <testsuite name='SwiftRepositoriesSnapshotsTests.SwiftRepositoriesSnapshotsTests' tests='1' failures='1'>
-    <testcase classname='SwiftRepositoriesSnapshotsTests.SwiftRepositoriesSnapshotsTests' name='testView'>
-      <failure message='failed - Snapshot comparison failed: Optional(Error Domain=FBSnapshotTestControllerErrorDomain Code=1 &quot;Unable to load reference image.&quot; UserInfo={NSLocalizedFailureReason=Reference image not found. You need to run the test in record mode, NSLocalizedDescription=Unable to load reference image., FBReferenceImageFilePathKey=/Users/matheusramos/Documents/Projects/SwiftRepositories/SwiftRepositoriesSnapshotsTests/ReferenceImages_64/SwiftRepositoriesSnapshotsTests.SwiftRepositoriesSnapshotsTests/testView_iPhone_14_2_375x667.png})'>SwiftRepositoriesSnapshotsTests/SwiftRepositoriesSnapshotsTests.swift:43</failure>
-    </testcase>
+  <testsuite name='SwiftRepositoriesSnapshotsTests.SwiftRepositoriesSnapshotsTests' tests='1' failures='0'>
+    <testcase classname='SwiftRepositoriesSnapshotsTests.SwiftRepositoriesSnapshotsTests' name='testView' time='0.126'/>
   </testsuite>
 </testsuites>
