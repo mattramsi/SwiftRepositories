@@ -1,0 +1,23 @@
+# The project scheme you want to build and test
+scheme("SwiftRepositories")
+
+# If it should clean the project before testing
+clean(true)
+
+# The output report types
+output_types("html,junit")
+
+# If it should open the reports
+open_report(false)
+
+# The output directory for the test reports
+output_directory("./reports")
+
+# Generate code coverage files
+code_coverage(true)
+
+# Device on which the test will be ran
+device("iPhone XS (12.2)")
+
+# Enable skip_build to skip debug builds for faster test performance
+skip_build(true)

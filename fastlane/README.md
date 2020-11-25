@@ -26,6 +26,11 @@ Description of what the lane does
 fastlane ios generate_ipa_develop
 ```
 Description of what the lane does
+### ios teste
+```
+fastlane ios teste
+```
+Testar
 
 ----
 

@@ -45,8 +45,7 @@ platform :ios do
   end
 
   desc "Testar"
-  Lane:teste do 
-    cocoapods
-    Scan
+  lane:teste do 
+     scan
   end
 end
