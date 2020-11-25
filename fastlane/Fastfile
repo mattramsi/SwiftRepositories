@@ -18,7 +18,6 @@ default_platform(:ios)
 platform :ios do
   desc "Description of what the lane does"
   lane :build do
-    scan(workspace: "SwiftRepositories.xcworkspace", device: "iPhone 8", scheme: "SwiftRepositories", code_coverage: true)
 
   slather(
       output_directory: "fastlane/html",
@@ -31,5 +30,17 @@ platform :ios do
       show: true
   )
 
+  end
+
+  desc "Description of what the lane does"
+  lane :generate_ipa_develop do
+    build_ios_app(
+      configuration: "Debug",
+      scheme: "SwiftRepositories",
+      clean: true,
+      export_method: 'development',
+      output_directory: "~/Desktop", # Destination directory. Defaults to current directory.
+      output_name: "fastlane_jenkins.ipa",
+    )
   end
 end
