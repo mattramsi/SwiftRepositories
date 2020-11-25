@@ -43,4 +43,10 @@ platform :ios do
       output_name: "fastlane_jenkins.ipa",
     )
   end
+
+  desc "Testar"
+  Lane:teste do 
+    cocoapods
+    Scan
+  end
 end
